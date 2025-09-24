@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cyclo-backend   # 👈 change this to your app name if different
+    env: python
+    runtime: python 3.11   # 👈 forces Python 3.11 instead of 3.13
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: free   # or starter/pro if you’re on a paid plan
+    autoDeploy: true
