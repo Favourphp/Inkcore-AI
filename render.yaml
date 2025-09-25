@@ -2,6 +2,6 @@ services:
   - type: web
     name: cyclo-backend   # 👈 change this to your app name
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirement.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     runtime: "python3.11"   # 👈 IMPORTANT: force Python 3.11
